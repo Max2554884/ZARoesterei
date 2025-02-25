@@ -1,10 +1,11 @@
 import java.util.Scanner;
+import utils.*;
 
 public class Verwaltung {
     private Scanner scanner;
-    private list<Kunde> warteschlange;
-    private list<Getraenk> getraenkeListe;
-    private list<Rechnung> rechnungsListe;
+    private Queue<Kunde> warteschlange;
+    private List<Getraenk> getraenkeListe;
+    private List<Rechnung> rechnungsListe;
 
     public static void main(String[] args) {
         new Verwaltung();
@@ -12,9 +13,9 @@ public class Verwaltung {
 
     public Verwaltung() {
         scanner = new Scanner(System.in);
-        warteschlange = new list<>();
-        getraenkeListe = new list<>();
-        rechnungsListe = new list<>();
+        warteschlange = new Queue<>();
+        getraenkeListe = new List<>();
+        rechnungsListe = new List<>();
         fuelleKaffeeListeAuf();
 
         while (true) {
@@ -75,7 +76,7 @@ public class Verwaltung {
                 rechnungsListe.append(rechnung);
                 kunde.setGetraenkErhalten(true);
                 System.out.println("Bestellung für " + kunde.getName() + " wurde bearbeitet.");
-                warteschlange.remove();
+                warteschlange.dequeue();
             } else {
                 System.out.println("Gewünschtes Getränk nicht verfügbar. Bitte füllen Sie die Liste auf.");
             }

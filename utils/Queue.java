@@ -1,3 +1,4 @@
+package utils;
 /**
  * <p>
  * Materialien zu den zentralen NRW-Abiturpruefungen im Fach Informatik ab 2018
