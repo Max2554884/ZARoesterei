@@ -87,6 +87,7 @@ public class Verwaltung {
     private void zeigeWarteschlange() {
 
         // Gesamte Warteschlange anzeigen
+        //
         if (!warteschlange.isEmpty()) {
             System.out.println("Inhalt der Warteschlange:");
             warteschlange.toFirst(); // Gehe zum ersten Element
