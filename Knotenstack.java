@@ -28,4 +28,5 @@ public class Knotenstack<T> {
         this.nextKnoten = nextKnoten;
     }
 }
+}
 
